@@ -1,1 +1,0 @@
-Version avec bandeaux supérieurs réduits, vidéo d’introduction et menu Progression personnelle unique. Les trois pages de branche restent accessibles depuis la page Progression.
