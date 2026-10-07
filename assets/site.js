@@ -1,0 +1,1 @@
+document.querySelector('.menubtn')?.addEventListener('click',()=>document.querySelector('.menu')?.classList.toggle('open'));const q=document.querySelector('#site-search');q?.addEventListener('input',()=>{const v=q.value.toLowerCase();document.querySelectorAll('[data-search]').forEach(x=>x.hidden=v&&!x.dataset.search.includes(v));});
