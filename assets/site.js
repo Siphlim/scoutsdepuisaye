@@ -1,1 +1,6 @@
-document.querySelector('.menubtn')?.addEventListener('click',()=>document.querySelector('.menu')?.classList.toggle('open'));const q=document.querySelector('#site-search');q?.addEventListener('input',()=>{const v=q.value.toLowerCase();document.querySelectorAll('[data-search]').forEach(x=>x.hidden=v&&!x.dataset.search.includes(v));});
+const b=document.querySelector('.menubtn'),m=document.querySelector('.menu');b?.addEventListener('click',()=>m?.classList.toggle('open'));
+const overlay=document.querySelector('#intro-overlay'),skip=document.querySelector('#intro-skip');let player;
+function closeIntro(mark=true){if(overlay){overlay.hidden=true;document.body.classList.remove('intro-open')}if(player?.stopVideo)player.stopVideo();if(mark)localStorage.setItem('scoutsPuisayeIntroSeen','1')}
+function openIntro(force=false){if(!overlay)return;if(!force&&localStorage.getItem('scoutsPuisayeIntroSeen'))return;overlay.hidden=false;document.body.classList.add('intro-open');if(player?.playVideo)player.playVideo()}
+window.onYouTubeIframeAPIReady=()=>{player=new YT.Player('intro-player',{videoId:'A0IZcZwskzA',playerVars:{autoplay:1,mute:1,controls:1,rel:0,playsinline:1},events:{onReady:()=>openIntro(false),onStateChange:e=>{if(e.data===YT.PlayerState.ENDED)closeIntro(true)}}})};
+const api=document.createElement('script');api.src='https://www.youtube.com/iframe_api';document.head.appendChild(api);skip?.addEventListener('click',()=>closeIntro(true));document.querySelectorAll('.intro-replay').forEach(x=>x.addEventListener('click',()=>openIntro(true)));
