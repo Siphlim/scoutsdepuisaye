@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 const b=document.querySelector('.menubtn'),m=document.querySelector('.menu');b?.addEventListener('click',()=>m?.classList.toggle('open'));
 const overlay=document.querySelector('#intro-overlay'),skip=document.querySelector('#intro-skip');let player;
 function closeIntro(mark=true){if(overlay){overlay.hidden=true;document.body.classList.remove('intro-open')}if(player?.stopVideo)player.stopVideo();if(mark)localStorage.setItem('scoutsPuisayeIntroSeen','1')}
 function openIntro(force=false){if(!overlay)return;if(!force&&localStorage.getItem('scoutsPuisayeIntroSeen'))return;overlay.hidden=false;document.body.classList.add('intro-open');if(player?.playVideo)player.playVideo()}
 window.onYouTubeIframeAPIReady=()=>{player=new YT.Player('intro-player',{videoId:'A0IZcZwskzA',playerVars:{autoplay:1,mute:1,controls:1,rel:0,playsinline:1},events:{onReady:()=>openIntro(false),onStateChange:e=>{if(e.data===YT.PlayerState.ENDED)closeIntro(true)}}})};
 const api=document.createElement('script');api.src='https://www.youtube.com/iframe_api';document.head.appendChild(api);skip?.addEventListener('click',()=>closeIntro(true));document.querySelectorAll('.intro-replay').forEach(x=>x.addEventListener('click',()=>openIntro(true)));
+=======
+const b=document.querySelector('.menubtn');const m=document.querySelector('.menu');b?.addEventListener('click',()=>{m?.classList.toggle('open');b.setAttribute('aria-expanded',m?.classList.contains('open')?'true':'false')});
+>>>>>>> 835b8f6593e50fb31ef23f7e3855a191806eb948

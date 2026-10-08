@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 180"><rect width="500" height="180" fill="white"/><text x="250" y="78" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="30" fill="#00384f">PLACEHOLDER LOGO</text><text x="250" y="120" text-anchor="middle" font-family="Arial" font-size="22" fill="#4a6032">Scouts et Guides de France</text></svg>
+=======
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 220"><rect width="560" height="220" rx="10" fill="#fff"/><rect x="8" y="8" width="544" height="204" rx="6" fill="none" stroke="#DDD6C7" stroke-width="4"/><text x="280" y="96" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="34" fill="#00384F">PLACEHOLDER LOGO</text><text x="280" y="142" text-anchor="middle" font-family="Arial,sans-serif" font-size="24" fill="#4A6032">Scouts et Guides de France</text></svg>
+>>>>>>> 835b8f6593e50fb31ef23f7e3855a191806eb948
