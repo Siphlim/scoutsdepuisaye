@@ -1,4 +1,4 @@
-SITE SCOUTS DE PUISAYE - VERSION 8 STRUCTURELLE
+SITE SCOUTS DE PUISAYE - VERSION 8.1 STATIQUE
 
 Cette version part de la V7 et introduit :
 - header commun dans includes/header.html ;
@@ -11,10 +11,9 @@ Cette version part de la V7 et introduit :
 - home allégée : suppression de la mention « Scouts et Guides de France », titre réduit, emblème agrandi.
 
 IMPORTANT
-Les composants communs sont chargés avec fetch(). Ils ne fonctionneront pas en ouvrant directement index.html en file://.
-Tester depuis un serveur local, par exemple : python -m http.server 8000
-Puis ouvrir http://localhost:8000/
-Sur OVH ou un autre hébergement HTTP/HTTPS, les inclusions fonctionneront directement.
+Toutes les pages publiées contiennent directement le header, le footer et leur menu latéral. Aucun fetch() n'est utilisé : la version fonctionne en local, sur GitHub Pages et sur OVH.
+
+Les fichiers communs restent disponibles dans templates/ comme sources de référence. Après modification d'un template, il faut régénérer les pages avant publication.
 
 REMPLACEMENT DU LOGO DU FOOTER
 Remplacer assets/logo-sgdf-rectangle.svg en conservant le même nom.
